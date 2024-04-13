@@ -1,0 +1,1 @@
+--- @todo Add default injury effects for body parts
