@@ -44,14 +44,15 @@ local function remove_buff(_src, buff_config)
 end
 
 local function start_timeout(_src, player, buff_id)
-    SetTimeout(debuff.duration * 1000, function()
+    local buff = config.buffs[buff_id]
+    SetTimeout(buff.duration * 1000, function()
         if player.data.buffs and player.data.buffs[buff_id] then
 
             if HUD == 'boii_hud' then
-                TriggerClientEvent('boii_hud:cl:remove_debuff', _src, buff_id)
+                TriggerClientEvent('boii_hud:cl:remove_buff', _src, buff_id)
             end
 
-            player.remove_effect('debuffs', buff_id)
+            player.remove_effect('buffs', buff_id)
         end
     end)
 end
