@@ -13,7 +13,7 @@ fx_version 'cerulean'
 games { 'gta5', 'rdr3' }
 
 name 'boii_statuses'
-version '0.0.1'
+version '0.1.1'
 description 'BOII | Development - Statuses'
 author 'boiidevelopment'
 repository 'https://github.com/boiidevelopment/boii_statuses'
